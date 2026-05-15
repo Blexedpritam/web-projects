@@ -13,8 +13,7 @@
     width: 100vw;
     min-height: 100px;
     /* background-color: rgba(98, 98, 158, 0.474); */
-    background: #020024;
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    background-image: conic-gradient(from 90deg, rgb(18, 18, 22) 0deg, rgb(22, 23, 26) 30deg, rgb(26, 27, 31) 60deg, rgb(31, 32, 35) 90deg, rgb(35, 36, 39) 120deg, rgb(39, 40, 43) 150deg, rgb(43, 44, 47) 180deg, rgb(47, 48, 51) 210deg, rgb(50, 51, 55) 240deg, rgb(54, 55, 58) 270deg, rgb(56, 57, 61) 300deg, rgb(59, 60, 64) 330deg, rgb(61, 62, 66) 360deg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,6 +24,7 @@
 nav{
     width: 100%;
     overflow-x: none;
+    padding-right: 2rem;
 }
 #Navlist{
     width: 100%;
@@ -69,20 +69,71 @@ a{
 .contentbox{
     width: 70%;
     margin: auto;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     background-color: white;
     display: flex;
     flex-direction: column;
     gap: 100px;
+    padding: 40px;
+    box-shadow:1px 1px 30px black ;
 
 
 }
 .item{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+}
+.rightbox{
+    position: relative;
+    overflow: hidden;
+    transition:all  0.3s linear 0s;
+    box-shadow: 1px 1px 10px black;
 }
 .rightbox img{
-    height:400px ;
+    height:250px ;
+    border-radius: 28px;
+    transition: all 0.6s linear 0s;
+}
+.rightbox:hover{
+    transform: scale(1.4);
+}
+
+.leftbox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.leftbox h2{
+    font-size: 2rem;
+}
+.ingbox{
+    font-size: 1.4rem;
+}
+.recipebox{
+    font-size: 1.1rem;
+}
+.rightbox .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(79, 71, 71, 0.647);
+    border-radius: 20px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3 linear 0s;
+}
+.rightbox:hover .overlay{
+    opacity: 1;
+}
+.rightbox .overlay span{
+    color: white;
+    font-size: 1.2rem;
 }
 
 
